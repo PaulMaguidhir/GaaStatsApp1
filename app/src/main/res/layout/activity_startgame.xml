@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".startgame">
+
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="@drawable/gaapitch"
+
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="257dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/editText_UserEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gaalogo" />
+
+    <EditText
+        android:id="@+id/editText_Venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Match Venue"
+        android:inputType="textPersonName"
+        android:textColor="#D3CFCF"
+        android:textColorHint="#F8F4F4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_Opponent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editText_Opponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Match Opponent"
+        android:inputType="textPersonName"
+        android:textColor="#D3CFCF"
+        android:textColorHint="#F8F4F4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_GameType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Venue" />
+
+    <EditText
+        android:id="@+id/editText_GameType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter in Competition"
+        android:inputType="textPersonName"
+        android:textColor="#D3CFCF"
+        android:textColorHint="#F8F4F4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Opponent" />
+
+    <Button
+        android:id="@+id/button_startGameContinue"
+        android:layout_width="157dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:onClick="saveMatchDetails"
+        android:text="Start game"
+        android:textColor="#FA020202"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_GameType" />
+</androidx.constraintlayout.widget.ConstraintLayout>

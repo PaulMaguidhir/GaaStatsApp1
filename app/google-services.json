@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "823636827734",
+    "firebase_url": "https://gaastatsapp-f512e.firebaseio.com",
+    "project_id": "gaastatsapp-f512e",
+    "storage_bucket": "gaastatsapp-f512e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823636827734:android:5de233fd11661d190225f7",
+        "android_client_info": {
+          "package_name": "com.example.gaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823636827734-dm2b6kbvktd6marm2m3ig9thje9nn2ra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJvaRaEBqJjEoppvrHzq-karZVLgRd4tU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823636827734-dm2b6kbvktd6marm2m3ig9thje9nn2ra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

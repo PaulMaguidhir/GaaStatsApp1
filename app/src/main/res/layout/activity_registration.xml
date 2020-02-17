@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="@drawable/gaapitch"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="257dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_Reg__Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gaalogo"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/editText_Reg__Email"
+        android:layout_width="215dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00DACCCC"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#F8E7E4E4"
+        android:textColorHint="#FAF6F6"
+        app:layout_constraintBottom_toTopOf="@+id/editText_Reg_Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/editText_Reg_Password"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textColor="#F3F1F1"
+        android:textColorHint="#F3F3F2F2"
+        app:layout_constraintBottom_toTopOf="@+id/button_Reg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Reg__Email"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_Reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="registerUser"
+        android:text="Sign Up"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Reg_Password"
+        android:gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="177dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="goLogin"
+        android:text="Have a account? Click here!"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Reg"
+        android:gravity="center"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

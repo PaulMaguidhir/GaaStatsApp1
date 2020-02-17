@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homepage">
+
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        android:background="@drawable/gaapitch"
+
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="257dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/button_startGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gaalogo" />
+
+    <Button
+        android:id="@+id/button_playerStats"
+        android:layout_width="157dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:onClick="playerStats"
+        android:text="Player Stats"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_matchStats" />
+
+    <Button
+        android:id="@+id/button_matchStats"
+        android:layout_width="157dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:onClick="matchStats"
+        android:text="Match Stats"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toTopOf="@+id/button_playerStats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_manageTeam" />
+
+    <Button
+        android:id="@+id/button_manageTeam"
+        android:layout_width="158dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:onClick="manageTeam"
+        android:text="Manage Team"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toTopOf="@+id/button_matchStats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_startGame" />
+
+    <Button
+        android:id="@+id/button_startGame"
+        android:layout_width="155dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:onClick="startGame"
+        android:text="Start Game"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toTopOf="@+id/button_manageTeam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="155dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:onClick="logout"
+        android:text="Log Out"
+        android:textColor="#FA020202"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_playerStats" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
