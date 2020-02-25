@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/Point"
-    android:title="Point"/>
+    android:title="Point"
+        android:onClick="homeTeamScoresPoint"/>
     <item android:id="@+id/Goal"
         android:title="goal"
         android:onClick="homeTeamScoresGoal"/>
     <item android:id="@+id/pointConceded"
-        android:title="Point conceded" />
+        android:title="Point conceded"
+        android:onClick="awayTeamScoresPoint"/>
     <item android:id="@+id/goalConceded"
-        android:title="Goal conceded" />
+        android:title="Goal conceded"
+        android:onClick="awayTeamScoresGoal"/>
     <item android:id="@+id/yellowCard"
         android:title="Yellow Card" />
     <item android:id="@+id/redCard"

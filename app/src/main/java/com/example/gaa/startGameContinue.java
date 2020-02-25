@@ -74,6 +74,11 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
                 lastPause = 0;
                 mStartButton.setEnabled(true);
                 mPauseButton.setEnabled(false);
+               //Resetting score Vareibles
+                scoreHomeTeam = 0;
+                scoreAwayTeam = 0;
+                displayforHomeTeam(0);
+                displayforAwayTeam(0);
 
             }
         });
@@ -132,7 +137,7 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
         displayforHomeTeam(scoreHomeTeam);
     }
 
-    public void homeTeamScoresPoint(View view){
+    public void homeTeamScoresPoint(MenuItem item){
         scoreHomeTeam = scoreHomeTeam + 0.01;
         displayforHomeTeam(scoreHomeTeam);
     }
@@ -142,11 +147,11 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
 
     }
     //Scoring Away function
-    public void awayTeamScoresGoal(View view){
+    public void awayTeamScoresGoal(MenuItem item){
         scoreAwayTeam = scoreAwayTeam + 1;
         displayforAwayTeam(scoreAwayTeam);
     }
-    public void awayTeamScoresPoint(View view){
+    public void awayTeamScoresPoint(MenuItem item){
         scoreAwayTeam = scoreAwayTeam + 0.01;
         displayforAwayTeam(scoreAwayTeam);
     }
