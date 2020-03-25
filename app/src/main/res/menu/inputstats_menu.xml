@@ -20,7 +20,7 @@
         android:title="Wide" />
     <item android:id="@+id/freeWon"
     android:title="Free won" />
-    <item android:id="@+id/foul"
+    <item android:id="@+id/matchFoul"
         android:title="Foul" />
     <item android:id="@+id/mark"
         android:title="Mark" />

@@ -18,7 +18,7 @@ private DatabaseReference mDatabase;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startgame);
-        mDatabase = FirebaseDatabase.getInstance().getReference("Match Details");
+        mDatabase = FirebaseDatabase.getInstance().getReference("Pre Match Details");
     }
     public  void saveMatchDetails(View view){
         String venue =((EditText) findViewById(R.id.editText_Venue)).getText().toString();
