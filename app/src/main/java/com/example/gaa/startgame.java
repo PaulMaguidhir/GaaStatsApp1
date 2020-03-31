@@ -20,7 +20,11 @@ private DatabaseReference mDatabase;
         setContentView(R.layout.activity_startgame);
         mDatabase = FirebaseDatabase.getInstance().getReference("Pre Match Details");
     }
-    public  void saveMatchDetails(View view){
+
+
+    public void saveMatchDetails(View view){
+
+
         String venue =((EditText) findViewById(R.id.editText_Venue)).getText().toString();
         String opponent =((EditText) findViewById(R.id.editText_Opponent)).getText().toString();
         String gametype =((EditText) findViewById(R.id.editText_GameType)).getText().toString();
@@ -30,6 +34,7 @@ private DatabaseReference mDatabase;
         mDatabase.child("Competition").setValue(gametype);
 
             startActivity(new Intent(startgame.this, startGameContinue.class));
+
     }
 
 

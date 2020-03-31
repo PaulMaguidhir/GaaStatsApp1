@@ -34,7 +34,6 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
     int freeWon = 0;
     int mark = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -162,6 +161,7 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
         displayforAwayTeam(scoreAwayTeam);
     }
 
+
     public void awayTeamScoresPoint(MenuItem item) {
         scoreAwayTeam = scoreAwayTeam + 0.01;
         displayforAwayTeam(scoreAwayTeam);
@@ -243,8 +243,7 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
         String yellowCard =((TextView) findViewById(R.id.matchYellowCard)).getText().toString();
         String freeWon =((TextView) findViewById(R.id.matchFreeWon)).getText().toString();
         String mark =(( TextView) findViewById(R.id.matchMark)).getText().toString();
-
-
+       
 
         sDatabase.child("Home Team Score").setValue(scoreHomeTeam);
         sDatabase.child("Away Team Score").setValue(scoreAwayTeam);
@@ -254,7 +253,7 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
         sDatabase.child("Yellow card").setValue(yellowCard);
         sDatabase.child("Free Won").setValue(freeWon);
         sDatabase.child("Mark").setValue(mark);
-
+        sDatabase.child("Match Time").setValue(mChronometer);
         startActivity(new Intent(startGameContinue.this, homepage.class));
     }
 
