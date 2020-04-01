@@ -243,7 +243,7 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
         String yellowCard =((TextView) findViewById(R.id.matchYellowCard)).getText().toString();
         String freeWon =((TextView) findViewById(R.id.matchFreeWon)).getText().toString();
         String mark =(( TextView) findViewById(R.id.matchMark)).getText().toString();
-       
+
 
         sDatabase.child("Home Team Score").setValue(scoreHomeTeam);
         sDatabase.child("Away Team Score").setValue(scoreAwayTeam);
