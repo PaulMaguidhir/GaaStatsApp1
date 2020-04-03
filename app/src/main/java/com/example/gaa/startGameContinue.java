@@ -24,15 +24,16 @@ public class startGameContinue extends AppCompatActivity implements PopupMenu.On
     private long lastPause;
     private DatabaseReference sDatabase;
 
-    //Score Var
-    double scoreHomeTeam = 0;
-    double scoreAwayTeam = 0;
-    int foul = 0;
-    int wide = 0;
-    int yellowCard = 0;
-    int redCard = 0;
-    int freeWon = 0;
-    int mark = 0;
+
+        //        //Score Var
+        double scoreHomeTeam = 0;
+         double scoreAwayTeam = 0;
+        int foul = 0;
+        int wide = 0;
+        int yellowCard = 0;
+        int redCard = 0;
+        int freeWon = 0;
+        int mark = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
