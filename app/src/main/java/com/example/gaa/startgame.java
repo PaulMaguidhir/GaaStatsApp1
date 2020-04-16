@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -27,7 +26,7 @@ private DatabaseReference mDatabase;
 
         String venue =((EditText) findViewById(R.id.editText_Venue)).getText().toString();
         String opponent =((EditText) findViewById(R.id.editText_Opponent)).getText().toString();
-        String gametype =((EditText) findViewById(R.id.editText_GameType)).getText().toString();
+        String gametype =((EditText) findViewById(R.id.editText_Competition)).getText().toString();
 
         mDatabase.child("venue").setValue(venue);
         mDatabase.child("opponent").setValue(opponent);

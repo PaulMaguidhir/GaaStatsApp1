@@ -72,13 +72,13 @@
         android:textColor="#D3CFCF"
         android:textColorHint="#F8F4F4"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText_GameType"
+        app:layout_constraintBottom_toTopOf="@+id/editText_Competition"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Venue" />
 
     <EditText
-        android:id="@+id/editText_GameType"
+        android:id="@+id/editText_Competition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -96,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_Opponent" />
 
     <Button
-        android:id="@+id/button_startGameContinue"
+        android:id="@+id/button_SavePlayerDetails"
         android:layout_width="157dp"
         android:layout_height="29dp"
         android:layout_marginTop="20dp"
@@ -107,5 +107,5 @@
         android:textColor="#FA020202"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_GameType" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_Competition" />
 </androidx.constraintlayout.widget.ConstraintLayout>
