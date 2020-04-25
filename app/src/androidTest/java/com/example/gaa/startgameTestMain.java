@@ -14,15 +14,15 @@ import static junit.framework.TestCase.assertTrue;
 public class startgameTestMain {
  /**
     @Test
-    public void startGameContinue() {
+    public void StartGameContinue() {
         String testView = "test";
-        Assert.assertThat(String.format("View Validity Test failed for %s ", testView), startgame.saveMatchDetails(), is(true));
+        Assert.assertThat(String.format("View Validity Test failed for %s ", testView), StartGame.saveMatchDetails(), is(true));
     }
 **/
    // @Test
    // public void paulNameTest() {
      //   String expected = "paul";
-    //    assertEquals(expected, startgame.getPaulName());
+    //    assertEquals(expected, StartGame.getPaulName());
     }
 //
   ////  @Test

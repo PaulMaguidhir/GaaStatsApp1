@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/Point"
-        android:title="Point"
-        android:onClick="homeTeamScoresPoint"/>
+    <item
+        android:id="@+id/Point"
+        android:title="Point" />
 
-    <item android:id="@+id/Goal"
-        android:title="goal"
-        android:onClick="homeTeamScoresGoal"/>
+    <item
+        android:id="@+id/Goal"
+        android:title="Goal" />
 
-    <item android:id="@+id/pointConceded"
-        android:title="Point conceded"
-        android:onClick="awayTeamScoresPoint"/>
+    <item
+        android:id="@+id/pointConceded"
+        android:title="Point Conceded" />
 
-    <item android:id="@+id/goalConceded"
-        android:title="Goal conceded"
-        android:onClick="awayTeamScoresGoal"/>
+    <item
+        android:id="@+id/goalConceded"
+        android:title="Goal Conceded" />
 
-    <item android:id="@+id/yellowCard"
-        android:title="Yellow Card"
-        android:onClick="matchyellowCard"/>
+    <item
+        android:id="@+id/yellowCard"
+        android:title="Yellow Card" />
 
-    <item android:id="@+id/redCard"
-        android:title="Red Card"
-        android:onClick="matchredCard"/>
+    <item
+        android:id="@+id/redCard"
+        android:title="Red Card" />
 
-    <item android:id="@+id/wide"
-        android:title="Wide"
-        android:onClick="matchWide"/>
+    <item
+        android:id="@+id/wide"
+        android:title="Wide" />
 
-    <item android:id="@+id/freeWon"
-        android:title="Free won"
-        android:onClick="matchFreewon"/>
+    <item
+        android:id="@+id/freeWon"
+        android:title="Free Won" />
 
-    <item android:id="@+id/matchFoul"
-        android:title="Foul"
-        android:onClick="matchFoul"/>
+    <item
+        android:id="@+id/matchFoul"
+        android:title="Foul" />
 
-    <item android:id="@+id/mark"
-        android:title="Mark"
-        android:onClick="matchMark"/>
+    <item
+        android:id="@+id/mark"
+        android:title="Mark" />
+
+    <item
+        android:id="@+id/substitute"
+        android:title="Substitute" />
+
+    <item
+        android:id="@+id/confirm"
+        android:title="Confirm" />
 
 </menu>
 

@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">GaaStatsApp</string>
+    <string-array name="player_position_array">
+        <item>Goalkeeper</item>
+        <item>Right Corner-Back</item>
+        <item>Full-Back</item>
+        <item>Left Corner-Back</item>
+        <item>Right Half-Back</item>
+        <item>Centre-Back</item>
+        <item>Left Half-Back</item>
+        <item>Right Midfielder</item>
+        <item>Left Midfielder</item>
+        <item>Right Half-Forward</item>
+        <item>Centre Forward</item>
+        <item>Left Half-Forward</item>
+        <item>Right Corner-Forward</item>
+        <item>Full Forward</item>
+        <item>Left Corner-Forward</item>
+    </string-array>
+    <string-array name="competition_array">
+        <item>Championship</item>
+        <item>League</item>
+        <item>Friendly</item>
+    </string-array>
 </resources>
