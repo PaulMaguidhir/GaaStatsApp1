@@ -4,404 +4,396 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".startGameContinue">
+    android:background="@drawable/background"
+    tools:context=".StartGameContinue">
 
-
-    <TextView
-        android:id="@+id/matchFreeWon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="0"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/matchYellowCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="0"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/matchRedCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="0"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="413dp"
-        android:layout_height="734dp"
-        android:background="@drawable/gaapitch"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button_startMatch"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:gravity="center"
-        android:text="Start Match"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Cancel and Return"
         android:textColor="#FA020202"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Chronometer
-        android:id="@+id/chronometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="#E7EBE7"
-        android:textSize="32dp"
-        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSave"
+        app:layout_constraintTop_toTopOf="@+id/btnSave" />
 
     <Button
-        android:id="@+id/button_pauseMatch"
-        android:layout_width="140dp"
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/button_resetMatch"
-        android:layout_toLeftOf="@+id/button_resetMatch"
-        android:layout_toEndOf="@+id/button_startMatch"
-        android:layout_toRightOf="@+id/button_startMatch"
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:gravity="center"
-        android:text="pause Match"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Save"
         android:textColor="#FA020202"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_resetMatch"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button_startMatch" />
+        app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPause" />
 
     <Button
-        android:id="@+id/button_resetMatch"
-        android:layout_width="118dp"
+        android:id="@+id/btnReset"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:gravity="center"
-        android:text="reset Match"
+        android:text="Reset"
         android:textColor="#FA020202"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/player1" />
 
-    <ImageButton
-        android:id="@+id/player1"
-        android:layout_width="34dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btnReset"
+        android:layout_toLeftOf="@+id/btnReset"
+        android:layout_toEndOf="@+id/btnStart"
+        android:layout_toRightOf="@+id/btnStart"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:text="Pause"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReset"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnStart"
+        app:layout_constraintTop_toTopOf="@+id/btnReset" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:gravity="center"
+        android:text="Start"
+        android:textColor="#FA020202"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPause"
+        app:layout_constraintEnd_toStartOf="@+id/btnPause"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
+        app:layout_constraintTop_toTopOf="@+id/btnPause" />
 
-
-    <ImageButton
-        android:id="@+id/player2"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="76dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player3"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="76dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player4"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="76dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player5"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player6"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player7"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player8"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="236dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"
-        />
-
-    <ImageButton
-        android:id="@+id/player9"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="236dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player10"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="308dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player11"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="308dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
-        android:id="@+id/player12"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="308dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey" />
-
-    <ImageButton
-        android:id="@+id/player13"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="380dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
-
-    <ImageButton
+    <Button
         android:id="@+id/player14"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="384dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="14"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player15"
+        app:layout_constraintEnd_toStartOf="@+id/player13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player15"
+        app:layout_constraintTop_toTopOf="@+id/player15"
+        app:srcCompat="@drawable/ic_jersey" />
 
-    <ImageButton
+
+    <Button
+        android:id="@+id/player9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="9"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player8"
+        app:layout_constraintTop_toTopOf="@+id/player8"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="12"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player8"
+        app:layout_constraintEnd_toStartOf="@+id/player11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player15"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="10"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player11"
+        app:layout_constraintTop_toTopOf="@+id/player11"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="7"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player4"
+        app:layout_constraintEnd_toStartOf="@+id/player6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player8"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="8"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player6"
+        app:layout_constraintEnd_toStartOf="@+id/player9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player12"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="1"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player3"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="5"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player6"
+        app:layout_constraintTop_toTopOf="@+id/player6"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="13"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player14"
+        app:layout_constraintTop_toTopOf="@+id/player14"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="4"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player1"
+        app:layout_constraintEnd_toStartOf="@+id/player3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player7"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="6"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player7"
+        app:layout_constraintEnd_toStartOf="@+id/player5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player7"
+        app:layout_constraintTop_toTopOf="@+id/player7"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="11"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player12"
+        app:layout_constraintEnd_toStartOf="@+id/player10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player12"
+        app:layout_constraintTop_toTopOf="@+id/player12"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="3"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player4"
+        app:layout_constraintEnd_toStartOf="@+id/player2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player4"
+        app:layout_constraintTop_toTopOf="@+id/player4"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="2"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/player3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player3"
+        app:layout_constraintTop_toTopOf="@+id/player3"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Button
         android:id="@+id/player15"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="380dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_pauseMatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/jersey"
-        android:onClick="inputStats"
-        />
-
-    <TextView
-        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_jersey_test"
+        android:text="15"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player12"
+        app:layout_constraintEnd_toStartOf="@+id/player14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHomeScore"
+        app:srcCompat="@drawable/ic_jersey" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="32dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHomeScore"
+        app:layout_constraintEnd_toStartOf="@+id/txtAwayScore"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtHomeScore"
+        app:layout_constraintTop_toTopOf="@+id/txtHomeScore" />
+
+    <TextView
+        android:id="@+id/txtHomeScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Home"
+        android:gravity="center"
+        android:text="Home \n 0"
         android:textAllCaps="true"
-        android:textColor="#000"
-        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/player15"
         app:layout_constraintEnd_toStartOf="@+id/chronometer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtAwayScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Away"
+        android:gravity="center"
+        android:text="Away \n 0"
         android:textAllCaps="true"
-        android:textColor="#000"
-        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chronometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/chronometer"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/homeTeamScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:fontFamily="sans-serif-light"
-        android:text="0"
-        android:textAllCaps="true"
-        android:textColor="#000"
-        android:textSize="56sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/awayTeamScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:fontFamily="sans-serif-light"
-        android:text="0"
-        android:textAllCaps="true"
-        android:textColor="#000"
-        android:textSize="56sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <ImageButton
-        android:id="@+id/ExitGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:onClick="saveMatchDetailsStarGame"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chronometer"
-        app:srcCompat="@android:drawable/btn_dialog" />
-
-    <TextView
-        android:id="@+id/matchFoul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="0"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/matchMark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="0"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/matchWide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="0"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="@+id/chronometer" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
