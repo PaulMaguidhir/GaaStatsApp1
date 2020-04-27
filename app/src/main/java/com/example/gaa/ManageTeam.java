@@ -160,6 +160,7 @@ public class ManageTeam extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "You have reached the maximum number of players!",
                                 Toast.LENGTH_SHORT).show();
                     } else {
+<<<<<<< HEAD
 
                         boolean flag = false;
                         if (teamStatus) {
@@ -175,6 +176,10 @@ public class ManageTeam extends AppCompatActivity {
                         String key = mDatabase.push().getKey();
                         Player player = new Player(key, firebaseUser.getUid(), playerName,
                                 playerPosition, Integer.parseInt(playerAge), teamStatus);
+=======
+                        String key = mDatabase.push().getKey();
+                        Player player = new Player(key, firebaseUser.getUid(), playerName, playerPosition, Integer.parseInt(playerAge), teamStatus);
+>>>>>>> origin/master
                         mDatabase.child(key).setValue(player).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
