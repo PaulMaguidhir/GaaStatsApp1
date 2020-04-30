@@ -1,8 +1,5 @@
 package com.example.gaa;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,6 +14,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Registration extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressBar progressBar;
@@ -27,17 +27,18 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.INVISIBLE);
     }
-    public void goLogin(View view){
+
+    public void goLogin(View view) {
         startActivity(new Intent(Registration.this, MainActivity.class));
     }
 
     public void registerUser(View view) {
         //getting emails and passwords from edit text
-        String email = ((EditText) findViewById(R.id.editText_Reg__Email)).getText().toString();
-        String password = ((EditText) findViewById(R.id.editText_Reg_Password)).getText().toString();
+        String email = ((EditText) findViewById(R.id.txtEmailSignup)).getText().toString();
+        String password = ((EditText) findViewById(R.id.txtPasswordSignup)).getText().toString();
 
         //checking if email and password are empty
         if (TextUtils.isEmpty(email)) {
@@ -49,22 +50,23 @@ public class Registration extends AppCompatActivity {
             return;
         }
 
-    //if email andpasssword are not empty progressbar displays
+        // If email andpasssword are not empty progressbar displays
         progressBar.setVisibility(View.VISIBLE);
-        //creating user
+
+        //Creating User
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     progressBar.setVisibility(View.GONE);
-                    Toast.makeText(Registration.this, "Succesffully Registered", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registration.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Registration.this, MainActivity.class));
                     finish();
                 } else {
                     FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                    Toast.makeText(Registration.this, "Failed Registtration:" + e.getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registration.this, "Registration Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        }
     }
+}
